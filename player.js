@@ -114,6 +114,35 @@ let physical = {
       return this.stats.atk+bonus;
 
     }
+  },
+  falconPunch: function(){
+    let baseDamage = this.stats.atk * 0.5;
+    let bonus = this.stats.atk * Math.random();
+    return baseDamage + bonus;
+
+  },
+  gohun: function(){
+    let bonus = 2 * this.stats.atk * Math.random();
+    return bonus;
+  },
+
+  roundhouseKick: function(){
+    let baseDamage = this.stats.atk * 0.5;
+    let tetradice = Math.random();
+      let kick = Math.ceil(this.stats.sp/3);
+      if(tetradice < 0.10){
+        return pump;
+
+      }
+      else if(tetradice < 0.33){
+        return 2 * pump;
+        
+      }
+      else if(tetradice < 0.33){
+        return 3 * pump;
+        
+      }
+
   }
 }
 
